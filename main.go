@@ -40,14 +40,12 @@ Write a Go program that prints out random numbers.<|im_end|>
 <|im_start|>assistant<|im_end|>
 `
 
-	// `Temperature` ve `Model` düzeltildi
-	temp := float32(0.3)
-
+	temp := float32(0.3) // float32 tipinde sıcaklık değeri
 	input := client.CompletionInput{
-		Model:       "Hermes2ProLlama38B", // Model adını string olarak kullanıyoruz
+		Model:       "Hermes-2-Pro-Llama-3-8B", // Model'i string olarak belirtiyoruz
 		Prompt:      prompt,
 		MaxTokens:   1000,
-		Temperature: &temp, // `Temperature` pointer olarak verilmeli
+		Temperature: &temp, // float32 değerini pointer olarak veriyoruz
 	}
 
 	resp, err := cln.Completions(ctx, input)
