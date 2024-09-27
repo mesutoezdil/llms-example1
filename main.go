@@ -44,8 +44,12 @@ Write a Go program that prints out random numbers.<|im_end|>
 		Model:       "Hermes-2-Pro-Llama-3-8B", // Model
 		Prompt:      prompt,
 		MaxTokens:   1000,
+<<<<<<< HEAD
 		Temperature: &temp, // float32
 	}
+=======
+		Temperature: &temp, // float32 
+>>>>>>> 01c86dc (Updated README.md with detailed API usage instructions)
 
 	resp, err := cln.Completions(ctx, input)
 	if err != nil {
