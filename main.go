@@ -6,7 +6,6 @@ import (
 	"log"
 	"os"
 	"time"
-
 	"github.com/predictionguard/go-client"
 )
 
@@ -40,12 +39,12 @@ Write a Go program that prints out random numbers.<|im_end|>
 <|im_start|>assistant<|im_end|>
 `
 
-	temp := float32(0.3) // float32 tipinde sıcaklık değeri
+	temp := float32(0.3) // float32 
 	input := client.CompletionInput{
-		Model:       "Hermes-2-Pro-Llama-3-8B", // Model'i string olarak belirtiyoruz
+		Model:       "Hermes-2-Pro-Llama-3-8B", // Model
 		Prompt:      prompt,
 		MaxTokens:   1000,
-		Temperature: &temp, // float32 değerini pointer olarak veriyoruz
+		Temperature: &temp, // float32
 	}
 
 	resp, err := cln.Completions(ctx, input)
